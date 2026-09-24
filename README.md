@@ -1,16 +1,12 @@
 # purrgame.com
 
-Static site for Purr: Cozy Cat Home — landing page, privacy policy and support, in English (`/`) and Spanish (`/es/`). No build step: plain HTML and one stylesheet.
+Static site for Purr: Cozy Cat Home — landing page, privacy policy and support, in English (`/`) and Spanish (`/es/`). No build step: plain HTML and one stylesheet, published with **GitHub Pages** from the `main` branch (root). Pushing to `main` deploys.
 
-## Deploy
+## Hosting
 
-The site is served by the same Caddy that fronts `api.purrgame.com` on the game's Hetzner host (see `server/prod/Caddyfile` in the game repo). `deploy.sh` copies the files to `/opt/purr/site` over SSH:
-
-```sh
-./deploy.sh            # rsync to root@2.29.45.95:/opt/purr/site
-```
-
-DNS for `purrgame.com` and `www` is at Cloudflare (proxied) and points at the host; Caddy obtains the certificate itself. Cloudflare's SSL mode must be **Full** (not Flexible).
+- GitHub → repo Settings → Pages: Source "Deploy from a branch", branch `main`, folder `/ (root)`; Custom domain `purrgame.com`; "Enforce HTTPS" once the certificate is issued.
+- `CNAME` in the repo holds the custom domain; `.nojekyll` keeps Pages from processing the files.
+- DNS (Cloudflare, DNS only / grey cloud): `purrgame.com` A records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`; `www` CNAME → `busyninja.github.io`.
 
 ## Edit
 
