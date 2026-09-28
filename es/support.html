@@ -4,25 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ayuda · Purr</title>
-<meta name="description" content="Ayuda y contacto de Purr: Cozy Cat Home.">
-<link rel="icon" href="../assets/icon-512.png">
+<meta name="description" content="Adopta, mima y colecciona gatos en Purr, un hogar acogedor para gatos en tu móvil o tablet. Gratis, amable y pensado para familias.">
+<link rel="icon" href="/assets/icon-512.png">
+<link rel="apple-touch-icon" href="/assets/icon-512.png">
+<link rel="canonical" href="https://purrgame.com/es/support.html">
 <link rel="alternate" hreflang="en" href="https://purrgame.com/support.html">
+<link rel="alternate" hreflang="es" href="https://purrgame.com/es/support.html">
+<link rel="alternate" hreflang="de" href="https://purrgame.com/de/support.html">
+<link rel="alternate" hreflang="fr" href="https://purrgame.com/fr/support.html">
+<link rel="alternate" hreflang="ja" href="https://purrgame.com/ja/support.html">
+<link rel="alternate" hreflang="ko" href="https://purrgame.com/ko/support.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://purrgame.com/zh-hant/support.html">
+<link rel="alternate" hreflang="x-default" href="https://purrgame.com/support.html">
+<meta property="og:title" content="Purr: Cozy Cat Home">
+<meta property="og:description" content="Adopta, mima y colecciona gatos en Purr, un hogar acogedor para gatos en tu móvil o tablet. Gratis, amable y pensado para familias.">
+<meta property="og:image" content="https://purrgame.com/assets/feature.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="/style.css">
+
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="./"><img src="../assets/icon-512.png" alt="">Purr</a>
+    <a class="brand" href="/es/"><img src="/assets/icon-512.png" alt="">Purr</a>
     <nav class="links">
       <a href="support.html">Ayuda</a>
       <a href="privacy.html">Privacidad</a>
-      <a class="lang" href="../support.html" lang="en">English</a>
     </nav>
   </header>
 
-  <article class="doc">
+<article class="doc">
     <h1>Ayuda</h1>
     <p>Escríbenos a <a href="mailto:hello@purrgame.com">hello@purrgame.com</a>. Respondemos en pocos días. Si es sobre una compra, indica el producto y la fecha; nunca hace falta enviar datos de la tarjeta.</p>
 
@@ -37,12 +49,17 @@
     <p>No. Los gatos de Purr nunca enferman, nunca pasan hambre de verdad y nunca se van para siempre. Cuando vuelves después de un tiempo, simplemente se alegran de verte.</p>
     <h3>¿Cómo funciona el control parental?</h3>
     <p>Ajustes → Control parental, tras una suma rápida que solo un adulto debería responder: compras desactivadas, aprobar cada compra, límite mensual, notificaciones y horas de descanso, recordatorios de pausa.</p>
-  </article>
+  
+</article>
 
   <footer>
     <span>© 2026 Busy Ninja · Purr: Cozy Cat Home</span>
-    <span><a href="terms.html">Condiciones</a> · <a href="./">Inicio</a> · <a href="privacy.html">Privacidad</a> · <a href="../support.html">English</a></span>
+    <span><a href="terms.html">Condiciones</a> · <a href="privacy.html">Privacidad</a> · <a href="support.html">Ayuda</a> · <a href="delete.html">Borrar cuenta</a></span>
   </footer>
+  <nav class="langs" aria-label="Idioma">🌐 <a href="/support.html" lang="en" data-lang="en">English</a> · <strong>Español</strong> · <a href="/de/support.html" lang="de" data-lang="de">Deutsch</a> · <a href="/fr/support.html" lang="fr" data-lang="fr">Français</a> · <a href="/ja/support.html" lang="ja" data-lang="ja">日本語</a> · <a href="/ko/support.html" lang="ko" data-lang="ko">한국어</a> · <a href="/zh-hant/support.html" lang="zh-Hant" data-lang="zh-hant">繁體中文</a></nav>
 </div>
+<script>
+document.querySelectorAll("[data-lang]").forEach(function(a){a.addEventListener("click",function(){try{localStorage.setItem("purr_lang",a.getAttribute("data-lang"));}catch(e){}});});
+</script>
 </body>
 </html>

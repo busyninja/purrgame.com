@@ -4,25 +4,48 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terms of Use · Purr</title>
-<meta name="description" content="Terms of use of Purr: Cozy Cat Home.">
-<link rel="icon" href="assets/icon-512.png">
+<meta name="description" content="Adopt, cuddle and collect cats in Purr, a cozy cat home for phones and tablets. Free, kind and made for families.">
+<link rel="icon" href="/assets/icon-512.png">
+<link rel="apple-touch-icon" href="/assets/icon-512.png">
+<link rel="canonical" href="https://purrgame.com/terms.html">
+<link rel="alternate" hreflang="en" href="https://purrgame.com/terms.html">
 <link rel="alternate" hreflang="es" href="https://purrgame.com/es/terms.html">
+<link rel="alternate" hreflang="de" href="https://purrgame.com/de/terms.html">
+<link rel="alternate" hreflang="fr" href="https://purrgame.com/fr/terms.html">
+<link rel="alternate" hreflang="ja" href="https://purrgame.com/ja/terms.html">
+<link rel="alternate" hreflang="ko" href="https://purrgame.com/ko/terms.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://purrgame.com/zh-hant/terms.html">
+<link rel="alternate" hreflang="x-default" href="https://purrgame.com/terms.html">
+<meta property="og:title" content="Purr: Cozy Cat Home">
+<meta property="og:description" content="Adopt, cuddle and collect cats in Purr, a cozy cat home for phones and tablets. Free, kind and made for families.">
+<meta property="og:image" content="https://purrgame.com/assets/feature.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
+<script>
+(function(){try{
+var have={"es":"es","de":"de","fr":"fr","ja":"ja","ko":"ko"};
+var pick=localStorage.getItem("purr_lang");
+if(!pick){var ls=navigator.languages||[navigator.language||""];
+for(var i=0;i<ls.length;i++){var l=(ls[i]||"").toLowerCase();
+if(l.indexOf("zh")===0){if(/hant|tw|hk|mo/.test(l)){pick="zh-hant";break;}continue;}
+var b=l.split("-")[0];if(b==="en"){pick="en";break;}if(have[b]){pick=have[b];break;}}}
+if(pick&&pick!=="en"){var p=location.pathname.replace(/^\//,"");if(p==="index.html")p="";
+location.replace("/"+pick+"/"+p+location.search+location.hash);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="/"><img src="assets/icon-512.png" alt="">Purr</a>
+    <a class="brand" href="/"><img src="/assets/icon-512.png" alt="">Purr</a>
     <nav class="links">
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
-      <a class="lang" href="es/terms.html" lang="es">Español</a>
     </nav>
   </header>
 
-  <article class="doc">
+<article class="doc">
     <h1>Terms of Use</h1>
     <p class="meta">Purr: Cozy Cat Home · Effective 29 September 2026 · Busy Ninja, Spain</p>
     <div class="summary"><strong>In short.</strong> Purr is free to play. Optional purchases are fixed-price and go through Apple or Google. Be kind to other players. Virtual items belong to the game and have no cash value. A grown-up is responsible for younger players and can control purchases in Parental Controls.</div>
@@ -53,12 +76,17 @@
 
     <h2>9. Contact</h2>
     <p><a href="mailto:hello@purrgame.com">hello@purrgame.com</a></p>
-  </article>
+  
+</article>
 
   <footer>
     <span>© 2026 Busy Ninja · Purr: Cozy Cat Home</span>
-    <span><a href="terms.html">Terms</a> · <a href="/">Home</a> · <a href="privacy.html">Privacy</a> · <a href="es/support.html">Español</a></span>
+    <span><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="delete.html">Delete account</a></span>
   </footer>
+  <nav class="langs" aria-label="Language">🌐 <strong>English</strong> · <a href="/es/terms.html" lang="es" data-lang="es">Español</a> · <a href="/de/terms.html" lang="de" data-lang="de">Deutsch</a> · <a href="/fr/terms.html" lang="fr" data-lang="fr">Français</a> · <a href="/ja/terms.html" lang="ja" data-lang="ja">日本語</a> · <a href="/ko/terms.html" lang="ko" data-lang="ko">한국어</a> · <a href="/zh-hant/terms.html" lang="zh-Hant" data-lang="zh-hant">繁體中文</a></nav>
 </div>
+<script>
+document.querySelectorAll("[data-lang]").forEach(function(a){a.addEventListener("click",function(){try{localStorage.setItem("purr_lang",a.getAttribute("data-lang"));}catch(e){}});});
+</script>
 </body>
 </html>

@@ -5,25 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Purr: Cozy Cat Home</title>
 <meta name="description" content="Adopt, cuddle and collect cats in Purr, a cozy cat home for phones and tablets. Free, kind and made for families.">
-<link rel="icon" href="assets/icon-512.png">
-<link rel="apple-touch-icon" href="assets/icon-512.png">
-<link rel="alternate" hreflang="es" href="https://purrgame.com/es/">
+<link rel="icon" href="/assets/icon-512.png">
+<link rel="apple-touch-icon" href="/assets/icon-512.png">
+<link rel="canonical" href="https://purrgame.com/">
 <link rel="alternate" hreflang="en" href="https://purrgame.com/">
+<link rel="alternate" hreflang="es" href="https://purrgame.com/es/">
+<link rel="alternate" hreflang="de" href="https://purrgame.com/de/">
+<link rel="alternate" hreflang="fr" href="https://purrgame.com/fr/">
+<link rel="alternate" hreflang="ja" href="https://purrgame.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://purrgame.com/ko/">
+<link rel="alternate" hreflang="zh-Hant" href="https://purrgame.com/zh-hant/">
+<link rel="alternate" hreflang="x-default" href="https://purrgame.com/">
 <meta property="og:title" content="Purr: Cozy Cat Home">
-<meta property="og:description" content="Adopt, cuddle and collect cats. Free, kind and made for families.">
-<meta property="og:image" content="https://purrgame.com/assets/splash.png">
+<meta property="og:description" content="Adopt, cuddle and collect cats in Purr, a cozy cat home for phones and tablets. Free, kind and made for families.">
+<meta property="og:image" content="https://purrgame.com/assets/feature.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
+<script>
+(function(){try{
+var have={"es":"es","de":"de","fr":"fr","ja":"ja","ko":"ko"};
+var pick=localStorage.getItem("purr_lang");
+if(!pick){var ls=navigator.languages||[navigator.language||""];
+for(var i=0;i<ls.length;i++){var l=(ls[i]||"").toLowerCase();
+if(l.indexOf("zh")===0){if(/hant|tw|hk|mo/.test(l)){pick="zh-hant";break;}continue;}
+var b=l.split("-")[0];if(b==="en"){pick="en";break;}if(have[b]){pick=have[b];break;}}}
+if(pick&&pick!=="en"){var p=location.pathname.replace(/^\//,"");if(p==="index.html")p="";
+location.replace("/"+pick+"/"+p+location.search+location.hash);}
+}catch(e){}})();
+</script>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="/"><img src="assets/icon-512.png" alt="">Purr</a>
+    <a class="brand" href="/"><img src="/assets/icon-512.png" alt="">Purr</a>
     <nav class="links">
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
-      <a class="lang" href="es/" lang="es">Español</a>
     </nav>
   </header>
 
@@ -36,16 +54,16 @@
         <span class="badge">▶ <span>Google Play<small>coming soon</small></span></span>
       </div>
     </div>
-    <div class="art"><img src="assets/splash.png" alt="A cream kitten sitting on a cloud, with the name Purr"></div>
+    <div class="art"><img src="/assets/splash.png" alt="A cream kitten sitting on a cloud, with the name Purr"></div>
   </section>
 
   <section class="shots" aria-label="Screenshots">
-    <img src="assets/shot-01.png" alt="The living room with two cats on a rug">
-    <img src="assets/shot-02.png" alt="Dressing a cat in the wardrobe">
-    <img src="assets/shot-03.png" alt="The cat album with many breeds">
-    <img src="assets/shot-04.png" alt="The Kitten Nursery with a Magic Egg">
-    <img src="assets/shot-05.png" alt="Villa Miau, the cat village">
-    <img src="assets/shot-06.png" alt="A mini-game with a ball of yarn">
+    <img src="/assets/shot-01.png" alt="The living room with two cats on a rug">
+    <img src="/assets/shot-02.png" alt="Dressing a cat in the wardrobe">
+    <img src="/assets/shot-03.png" alt="The cat album with many breeds">
+    <img src="/assets/shot-04.png" alt="The Kitten Nursery with a Magic Egg">
+    <img src="/assets/shot-05.png" alt="Villa Miau, the cat village">
+    <img src="/assets/shot-06.png" alt="A mini-game with a ball of yarn">
   </section>
 
   <section class="features">
@@ -67,10 +85,17 @@
     </ul>
   </section>
 
+  
+
+
   <footer>
     <span>© 2026 Busy Ninja · Purr: Cozy Cat Home</span>
-    <span><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="es/">Español</a></span>
+    <span><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="delete.html">Delete account</a></span>
   </footer>
+  <nav class="langs" aria-label="Language">🌐 <strong>English</strong> · <a href="/es/" lang="es" data-lang="es">Español</a> · <a href="/de/" lang="de" data-lang="de">Deutsch</a> · <a href="/fr/" lang="fr" data-lang="fr">Français</a> · <a href="/ja/" lang="ja" data-lang="ja">日本語</a> · <a href="/ko/" lang="ko" data-lang="ko">한국어</a> · <a href="/zh-hant/" lang="zh-Hant" data-lang="zh-hant">繁體中文</a></nav>
 </div>
+<script>
+document.querySelectorAll("[data-lang]").forEach(function(a){a.addEventListener("click",function(){try{localStorage.setItem("purr_lang",a.getAttribute("data-lang"));}catch(e){}});});
+</script>
 </body>
 </html>

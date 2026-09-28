@@ -76,3 +76,9 @@ footer a { color: var(--ink-soft); }
   nav.links a { margin-left: 12px; font-size: 15px; }
   article.doc { padding: 24px 20px; }
 }
+
+nav.langs { padding: 0 0 36px; color: var(--ink-soft); font-size: 14px; line-height: 2; }
+nav.langs a { color: var(--ink-soft); text-decoration: none; }
+nav.langs a:hover { color: var(--lilac-deep); text-decoration: underline; }
+nav.langs strong { color: var(--ink); }
+:lang(ja) body, :lang(ko) body, :lang(zh-Hant) body { font-family: "Nunito", "Hiragino Sans", "Apple SD Gothic Neo", "PingFang TC", "Noto Sans CJK JP", "Noto Sans CJK KR", "Noto Sans CJK TC", system-ui, sans-serif; }
