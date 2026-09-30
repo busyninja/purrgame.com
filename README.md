@@ -14,5 +14,5 @@ Static site for Purr: Cozy Cat Home — landing page, privacy policy, terms, sup
 - `build.py` holds the shared head, nav, language bar, footer, hreflang/canonical links and per-language labels (`UI`).
 - English pages carry a small script that sends first-time visitors to their browser language (`navigator.languages`); English is the default. Choosing a language in the bar is remembered in `localStorage` (`purr_lang`), so the redirect never fights the visitor.
 - The English privacy policy and terms are the legal reference; translations say so and link to them. Change English first, then the translations.
-- `assets/`: icon (from the game's iOS app icon), splash and store screenshots (`tools/store_shot.tscn` in the game repo, downscaled to 900 px high).
+- `assets/`: icon (from the game's iOS app icon), splash and store screenshots per language in `assets/shots/<lang>/01-08.png` (`tools/store_shot.tscn` in the game repo, downscaled to 900 px high).
 - Contact address in the pages: `hello@purrgame.com`.
